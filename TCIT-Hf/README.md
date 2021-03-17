@@ -35,7 +35,8 @@ If your input type is smiles string:
 3. By default, run "python TCIT -t smiles" and the program will take all smiles string in input.txt and return a prediction result in result.log
 
 If you want to get liquid/solid phase predictions as well, add --liquid/--solid in the end. 
-E.g 'python TCIT.py -t smiles -i input_list/test_inp.txt' --liquid --solid
+
+I.e. 'python TCIT.py -t smiles -i input_list/test_inp.txt' --liquid --solid
 
 ## Notes
 1. Make sure the bin folder of openbabel is added in the environment setting, or 'alias obabel=' to that bin folder 
