@@ -1,0 +1,2 @@
+Molecule                                                     Hf_0k           Hf_298k         Hf_liquid       Hf_solid       
+C1=CC=C(C=C1)O                                               -72.7348        -93.2495        -152.0495       -162.1695      

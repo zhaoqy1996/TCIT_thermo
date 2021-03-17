@@ -1,0 +1,26 @@
+Working on C1=CC=C(C=C1)O...
+
+========================================================================================================================
+========================================================================================================================
+
+No more information is needed, begin to calculate enthalpy of fomation of C1=CC=C(C=C1)O
+Identify rings! Add ring correction to final predictoon
+Add ring correction  602612.341409: -19.075011325507813 kcal/mol into final prediction (based on depth=0 ring  602410.368879: -20.50010593 kcal/mol)
+Prediction are made based on such group types:
+[6[6[6][1]][6[6][1]][1]]      : 6.74395169
+[6[6[6][1]][6[6][1]][1]]      : 6.74395169
+[6[6[8][6]][6[6][1]][1]]      : 7.20716966
+[6[6[6][1]][6[6][1]][8[1]]]   : 4.2911312
+[6[6[8][6]][6[6][1]][1]]      : 7.20716966
+[6[6[6][1]][6[6][1]][1]]      : 6.74395169
+[8[6[6][6]][1]]               : -42.14950418
+Prediction of Hf_0 for C1=CC=C(C=C1)O is -72.73483796809201 kJ/mol
+Prediction of Hf_298 for C1=CC=C(C=C1)O is -93.24949965903707 kJ/mol
+
+
+Prediction of Hf_298 for C1=CC=C(C=C1)O in liquid pahse is -152.04949965903705 kJ/mol (HVAP: 58.8 kJ/mol)
+
+
+Prediction of Hf_298 for C1=CC=C(C=C1)O in solid pahse is -162.16949965903706 kJ/mol (HSUB: 68.92 kJ/mol)
+
+
