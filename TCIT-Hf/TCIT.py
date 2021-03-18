@@ -22,7 +22,7 @@ random.seed(0)
 # import taffi related functions
 sys.path.append('/'.join(os.path.abspath(__file__).split('/')[:-2])+'/utilities')
 from taffi_functions import * 
-from deal_ring import get_rings,return_inchikey
+from deal_ring import get_rings,return_inchikey,return_smi
 
 # import Machine learning related functions
 sys.path.append('/'.join(os.path.abspath(__file__).split('/')[:-1])+'/ML-package')
@@ -150,7 +150,7 @@ def main(argv):
 
         # set success predict flag
         success = False
-
+        
         if len(min_types) > 0:
             print("\n{} can not use TCIT to calculate, the result comes from G4 result".format(name))
 
@@ -171,19 +171,18 @@ def main(argv):
             else:
                 print("G4 calculations are missing for this small compound...")
 
-            continue
-
-        if len(Unknown) == 0: 
-            print("\n"+"="*120)
-            print("="*120)
-            print("\nNo more information is needed, begin to calculate enthalpy of fomation of {}".format(i.split('/')[-1]))
-            Hf_0,Hf_298 = calculate_CAV(E,G,adj_mat,name,FF_dict,ring_dict,base_model)
-            success = True
-
         else:
-            print("\n"+"="*120)
-            print("Unknown CAVs are required for this compound, skipping...\n") 
-            print("\n"+"="*120)
+            if len(Unknown) == 0: 
+                print("\n"+"="*120)
+                print("="*120)
+                print("\nNo more information is needed, begin to calculate enthalpy of fomation of {}".format(i.split('/')[-1]))
+                Hf_0,Hf_298 = calculate_CAV(E,G,adj_mat,name,FF_dict,ring_dict,base_model)
+                success = True
+
+            else:
+                print("\n"+"="*120)
+                print("Unknown CAVs are required for this compound, skipping...\n") 
+                print("\n"+"="*120)
 
         if success:
             TCITresult[name]={}
