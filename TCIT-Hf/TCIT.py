@@ -255,15 +255,20 @@ def calculate_CAV(E,G,adj_mat,name,FF_dict,ring_dict,base_model):
 
                 if float(depth0_ring["hash_index"]) in ring_dict["HF_0"].keys():
 
-                    # predict difference at 0K
-                    base_model.load_weights('/'.join(os.path.abspath(__file__).split('/')[:-1])+'/ML-package/zero_model.h5')
-                    diff_0K = getPrediction([depth2_ring["smiles"]],[depth0_ring["smiles"]],base_model)
+                    if depth2_ring["hash_index"] != depth0_ring["hash_index"]:
+                        # predict difference at 0K
+                        base_model.load_weights('/'.join(os.path.abspath(__file__).split('/')[:-1])+'/ML-package/zero_model.h5')
+                        diff_0K = getPrediction([depth2_ring["smiles"]],[depth0_ring["smiles"]],base_model)
 
-                    # predict difference at 298K
-                    base_model.load_weights('/'.join(os.path.abspath(__file__).split('/')[:-1])+'/ML-package/roomT_model.h5')
-                    diff_298= getPrediction([depth2_ring["smiles"]],[depth0_ring["smiles"]],base_model)
-                    RC_0K   = ring_dict["HF_0"][float(depth0_ring["hash_index"])]  + diff_0K
-                    RC_298  = ring_dict["HF_298"][float(depth0_ring["hash_index"])]+ diff_298
+                        # predict difference at 298K
+                        base_model.load_weights('/'.join(os.path.abspath(__file__).split('/')[:-1])+'/ML-package/roomT_model.h5')
+                        diff_298= getPrediction([depth2_ring["smiles"]],[depth0_ring["smiles"]],base_model)
+                        RC_0K   = ring_dict["HF_0"][float(depth0_ring["hash_index"])]  + diff_0K
+                        RC_298  = ring_dict["HF_298"][float(depth0_ring["hash_index"])]+ diff_298
+
+                    else:
+                        RC_0K   = ring_dict["HF_0"][float(depth0_ring["hash_index"])]
+                        RC_298  = ring_dict["HF_298"][float(depth0_ring["hash_index"])]
 
                     ring_corr_0K  +=RC_0K 
                     ring_corr_298K+=RC_298
