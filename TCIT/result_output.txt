@@ -1,1 +1,0 @@
-Molecule                                                     Hf_0k           Hf_298k         Gf_298k         S0_298k         Cv_298k
