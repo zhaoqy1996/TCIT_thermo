@@ -23,6 +23,7 @@ def main(argv):
 # If return_R0 is True, both RC2 and RC0 will be returned
 #
 def get_rings(E,G,gens=2,return_R0=True):
+
     # Define mass dictionary for args.avoid_frags == True case
     mass_dict = {'H':1.00794,'He':4.002602,'Li':6.941,'Be':9.012182,'B':10.811,'C':12.011,'N':14.00674,'O':15.9994,'F':18.9984032,'Ne':20.1797,\
                  'Na':22.989768,'Mg':24.3050,'Al':26.981539,'Si':28.0855,'P':30.973762,'S':32.066,'Cl':35.4527,'Ar':39.948,\
@@ -92,6 +93,7 @@ def get_rings(E,G,gens=2,return_R0=True):
         fixed_bonds=[]
         for i in loop_list:
             fixed_bonds += [(i,j,int(k)) for j,k in enumerate(N_bond_mat[i]) if k > 1 and i < j]
+
         N_Geometry,tmp_Atom_types,N_Elements,N_Adj_mat,added_idx = ring_add_hydrogens(N_G,N_adj_mat,N_bond_mat,deepcopy(N_atom_types),N_E)
         ring_masses     = [ mass_dict[N_Elements[j]] for j in range(len(tmp_Atom_types)) ]
         hash_list,atoms = [ list(j) for j in zip(*sorted([ (atom_hash(count_k,N_Adj_mat,ring_masses,gens=len(ring_inds)),k) for count_k,k in enumerate(range(len(tmp_Atom_types))) ],reverse=True)) ] 

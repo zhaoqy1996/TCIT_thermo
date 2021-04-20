@@ -1,0 +1,19 @@
+Working on CCC(=C)C=C...
+
+CCC(=C)C=C can not use TCIT to calculate, the result comes from G4 result
+
+========================================================================================================================
+========================================================================================================================
+
+No more information is needed, begin to calculate enthalpy of fomation of CCC(=C)C=C
+Prediction are made based on such group types: (Hf_298k/S0_298k)
+[6[6[1][1][1]][6[6][6]][1][1]]: -4.64/10.31
+[6[6[6][1][1]][6[6][1]][6[1][1]]]: 9.00 /-13.50
+[6[6[6][6]][6[1][1]][1]]      : 7.29 /9.00 
+Prediction of Hf_0 for CCC(=C)C=C is 86.11928294687162 kJ/mol
+Prediction of Hf_298 for CCC(=C)C=C is 58.85258437026686 kJ/mol
+Prediction of Gf_298 for CCC(=C)C=C is 157.40684495985877 kJ/mol
+Prediction of S0_gas for CCC(=C)C=C is 357.2873902747212 J/(mol*K)
+Prediction of Cv_gas for CCC(=C)C=C is 112.97159251232186 J/(mol*K)
+
+
