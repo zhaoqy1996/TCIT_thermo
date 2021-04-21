@@ -1,0 +1,36 @@
+# NIST might be wrong 
+Case 1. multiple exp data for gas phase are available, one matches with TCIT; however, only one liquid data exist and doesn;t match with that exp gas data
+Case 2: liquid and gas phase exp data do not match with each other
+Case 3: exp gas data are obviously wrong
+CCCCCC#C                                                     55.08      101.10     -46.02     -0.24     
+CCCCCCCN                                                     -199.90    -266.00    66.10      66.06     
+CCCCCCN                                                      -174.32    -239.00    64.68      64.66     
+C1CC=CCN1                                                    -31.73     33.00      -64.73     45.97     
+NC(=O)C=C                                                    -168.39    -224.00    55.61      1.52      
+O=C1OCCO1                                                    -590.76    -682.80    92.04      -7.76     
+CC(=O)CC(=O)c1ccccc1                                         -289.18    -340.00    50.82      10.52     
+CC(=O)CC(C)(C)O                                              -526.74    -592.80    66.06      11.59     
+CCOC(=O)CC(=O)OCC                                            -872.66    -986.60    113.94     -12.46    
+Cc1ccc(N)cc1Cl                                               -46.54     23.00      -69.54     -3.10     
+Cc1cccc(N)c1                                                 -0.58      42.30      -42.88     -3.68     
+
+# G4/Exp is wrong
+C=C[S](=O)C=C                                                20.81      -26.20     47.01      47.01     
+C=CSC=C                                                      122.83     67.70      55.13      55.13     
+C/C(O)=C/C(C)=O                                              -377.73    -426.30    48.57      49.43     
+CCOC(=O)C#CCC                                                -254.02    -302.00    47.98      43.98     
+CCCCOC(C)=O                                                  -527.54    -609.60    82.06      81.46     
+CC1OC=C(C)O1                                                 -318.58    -458.00    139.42     139.42    
+CC1OCC(=C)O1                                                 -301.05    -420.20    119.15     119.05    
+CCC(=O)CC(C)=O                                               -411.18    -505.00    93.82      51.52     
+CC(C)(C(O)=O)C(O)=O                                          -905.46    -797.10    -108.36    -108.36   
+CCC(Cl)C(=O)OCC(C)C                                          -609.12    -661.50    52.38      52.38     
+CCC(Cl)C(=O)OCCC(C)C                                         -629.22    -684.10    54.88      54.88     
+CCCCOC(=O)C(Cl)CC                                            -600.23    -655.20    54.97      54.97     
+CCCOC(=O)C(Cl)CC                                             -579.74    -630.90    51.16      51.16     
+
+# Hvap is wrong (Due to simpol model, simple model fail to include sulfone groups)
+C[S](=O)(=O)CC=C                                             -290.00    -385.10    95.10      14.75     
+C[S](=O)(=O)c1ccccc1                                         -301.49    -345.40    43.91      3.00      
+C[S](C)(=O)=O                                                -397.28    -446.40    49.12      1.98      
+Fc1c(F)c(F)c(c(F)c1F)C(F)(F)F                                -1507.55   -1311.10   -196.45    26.47     

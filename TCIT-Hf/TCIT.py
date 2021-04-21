@@ -83,7 +83,7 @@ def main(argv):
         args.input_name = 'input_list/test_inp.txt'
     
     # load database
-    FF_dict = parse_HF_database('/'.join(os.path.abspath(__file__).split('/')[:-2])+'/database/TCIT_HF.db')    
+    FF_dict = parse_HF_database('/'.join(os.path.abspath(__file__).split('/')[:-2])+'/database/TCIT_Hf.db')    
     G4_dict = parse_G4_database('/'.join(os.path.abspath(__file__).split('/')[:-2])+'/database/G4_thermo.db')
     ring_dict = parse_ringcorr('/'.join(os.path.abspath(__file__).split('/')[:-2])+'/database/depth0_RC.db')
     
