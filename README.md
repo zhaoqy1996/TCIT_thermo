@@ -7,19 +7,14 @@ This script implemented TCIT which performs on a given folder of target compound
 The script operates on either a folder of xyz files or a list of smiles strings, prints out the Taffi components and corresponding CAVs that are used for each prediction, and returns the 0K and 298K enthalpy of formation as well as enthalpy of formation of liquid phase and solid phase. 
 
 ## Software requirement
-1. openbabel 2.4.1 
-2. python 3.5 or higher
-3. tensorflow 2.X
-4. numpy 1.17 or higher
+1. openbabel 2.4.1 or higher
+2. anaconda
 
 ## Set up an environment if needed
-* conda create -n TCIT python=3.7
+* conda create -n TCIT -c conda-forge python=3.7 rdkit
 * source activate TCIT
-* conda install numpy=1.17.2
-* conda install tensorflow=2.0.0
-* conda install matplotlib=3.1.0
-* conda install -c anaconda scikit-learn=0.21.3 
-* conda install -c conda-forge rdkit
+* pip install alfabet
+* pip install mordred
 
 ## Usage
 If your input type a xyz file:
