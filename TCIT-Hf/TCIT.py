@@ -127,7 +127,7 @@ def main(argv):
             name = i
             smiles= i
 
-        if True in [element.lower() not in ['h','c','n','o','f','s','cl','br','p'] for element in E]:
+        if True in [element.lower() not in ['h','b','c','n','o','f','s','cl','br','p'] for element in E]:
             print("can't deal with some element in this compounds")
             continue
 

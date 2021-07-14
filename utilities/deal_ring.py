@@ -39,7 +39,7 @@ def get_rings(E,G,gens=2,return_R0=True):
     atom_types = id_types(E,adj_mat,2)
 
     # calculate formal charge and bonding matrix
-    bond_mat = find_lewis(atom_types,adj_mat,b_mat_only=True)[0]
+    bond_mat = find_lewis(E,adj_mat,b_mat_only=True)[0]
 
     # identify ring atoms and number of rings
     rings=[]

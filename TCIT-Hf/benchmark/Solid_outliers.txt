@@ -1,8 +1,4 @@
 # NIST might be wrong
-NC(=O)c1ccc(cc1)C(N)=O                                       -337.00    -433.10    96.10      12.30     
-COc1nc(OC)nc(OC)n1                                           -239.41    -478.30    238.89     142.85    
-NC(=O)c1cccc(c1)C(N)=O                                       -330.90    -436.90    106.00     17.50     
-OCOOCO                                                       -586.49    -665.80    79.31      28.51     
-
-# TCIT is expected to fail
-C/1=C/C=C/C=C/C=C\C=C/C=C/C=C\C=C\C=C1                       389.40     163.00     226.40     227.90    
+NC(=O)c1ccc(cc1)C(N)=O                                       -337.00    -433.10    96.10      12.30
+NC(=O)c1cccc(c1)C(N)=O                                       -330.90    -436.90    106.00     17.50
+OCOOCO                                                       -586.49    -665.80    79.31      28.51
